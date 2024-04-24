@@ -1,1 +1,10 @@
-<p>home works!</p>
+<div>
+    <h2>Movies</h2>
+    <div *ngFor="let movie of movies">
+      <a [routerLink]="['/movie', movie.id]">
+        <img [src]="movie.poster" alt="{{ movie.title }}">
+        <h3>{{ movie.title }}</h3>
+      </a>
+      <p>Release Date: {{ movie.releaseDate }}</p>
+    </div>
+  </div>
